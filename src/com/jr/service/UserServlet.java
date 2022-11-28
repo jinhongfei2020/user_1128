@@ -17,6 +17,10 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;charset=UTF-8");
+
 
     }
     public void Register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -38,6 +42,15 @@ public class UserServlet extends HttpServlet {
     }
 
     public void removeUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+            UserBizImpl ubi=new UserBizImpl();
+            User user=new User();
+            user.setUid(Integer.parseInt(request.getParameter("empno")));
+            boolean boo=ubi.removeUser(user);
+            if (boo){
+                showUser(request,response);
+            }else{
+                showUser(request,response);
+            }
 
     }
     public void selectByid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

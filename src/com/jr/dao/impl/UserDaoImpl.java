@@ -34,7 +34,8 @@ public class UserDaoImpl implements IUserDao {
 
     @Override
     public int deleteUser(User user) {
-        return 0;
+        String sql="delete from team5 where uid=?";
+        return upd(sql,user.getUid());
     }
 
     @Override
