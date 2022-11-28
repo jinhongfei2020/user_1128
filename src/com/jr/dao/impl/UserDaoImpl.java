@@ -19,7 +19,24 @@ public class UserDaoImpl implements IUserDao {
 
     @Override
     public int insertUser(User user) {
-        return 0;
+
+        int i = 0;
+
+        try {
+            con = DBHelper.getconn();
+            String sql = "insert into user values (?,?,?,?)";
+            ps = con.prepareStatement(sql);
+            i = upd(sql,user.getUid(),user.getName(),user.getPassword(),user.getAge());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBHelper.closeAll(rs,ps,con);
+        }
+        return i;
     }
 
     @Override

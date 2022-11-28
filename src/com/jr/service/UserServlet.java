@@ -4,6 +4,7 @@ import com.jr.biz.impl.UserBizImpl;
 import com.jr.entry.User;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +14,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@WebServlet("/user")
 public class UserServlet extends HttpServlet {
 
     @Override
@@ -22,11 +24,30 @@ public class UserServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
 
+        Register(request,response);
+
     }
     public void Register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
+
+        int uid = Integer.parseInt(request.getParameter("uid"));
+        String name = request.getParameter("name");
+        String password = request.getParameter("password");
+        int age = Integer.parseInt(request.getParameter("age"));
+
+        UserBizImpl ubi = new UserBizImpl();
+        User user = new User(uid,name,password,age);
+        boolean bool = ubi.registerUser(user);
+
+        if (bool){
+            System.out.println("注册成功");
+            request.getRequestDispatcher("index.jsp").forward(request,response);
+        }else {
+            System.out.println("注册失败");
+            response.getWriter().println("<h1 color:pink;>注册失败</h1>"+"<a href='insert.jsp'>register again</a>");
+        }
     }
     public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 

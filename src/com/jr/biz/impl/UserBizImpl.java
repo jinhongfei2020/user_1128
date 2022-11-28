@@ -10,7 +10,8 @@ public class UserBizImpl implements IUserBiz {
     UserDaoImpl udi=new UserDaoImpl();
     @Override
     public boolean registerUser(User user) {
-        return false;
+        UserDaoImpl udi = new UserDaoImpl();
+        return udi.insertUser(user)!=0?true:false;
     }
 
     @Override
