@@ -13,9 +13,10 @@
 <body>
 <h1>欢迎来到用户注册界面</h1>
 <form action="user" method="get">
-    用户名：<input type="text" name="name"><br/>
-    密码：<input type="text" name="password"><br/>
-    年龄：<input type="text" name="age"><br/>
+    用户编号：<input type="text" name="uid" ><br/>
+    用户名：<input type="text" name="name" ><br/>
+    密码：<input type="password" name="password"><br/>
+    年龄：<input type="text" name="age" ><br/>
     <input type="submit"value="确认注册">
 </form>
 </body>

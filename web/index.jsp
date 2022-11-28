@@ -10,11 +10,11 @@
   <head>
     <title>$Title$</title>
   </head>
-  <body>
+  <body>id
   <h1>登陆界面</h1>
   <form action="user" method="get">
     用户名：<input type="text" name="name" ><br/>
-    密码：<input type="text" name="password"><br/>
+    密码：<input type="password" name="password"><br/>
     <input type="hidden" name="num" value="1">
     <input type="submit"value="确认登录">
   </form>
