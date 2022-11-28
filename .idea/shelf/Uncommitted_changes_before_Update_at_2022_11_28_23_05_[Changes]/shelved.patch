@@ -1,0 +1,145 @@
+Index: out/artifacts/usertest_1128_war_exploded/insert.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: J\r\n  Date: 2022/11/28\r\n  Time: 20:14\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n<h1>欢迎来到用户注册界面</h1>\r\n<form action=\"user\" method=\"get\">\r\n    用户名：<input type=\"text\" name=\"name\"><br/>\r\n    密码：<input type=\"text\" name=\"password\"><br/>\r\n    年龄：<input type=\"text\" name=\"age\"><br/>\r\n    <input type=\"submit\"value=\"确认注册\">\r\n</form>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/artifacts/usertest_1128_war_exploded/insert.jsp b/out/artifacts/usertest_1128_war_exploded/insert.jsp
+--- a/out/artifacts/usertest_1128_war_exploded/insert.jsp	(revision 96e7f04071695be2fe107f42fbd36db9c34711fe)
++++ b/out/artifacts/usertest_1128_war_exploded/insert.jsp	(date 1669646555448)
+@@ -13,9 +13,10 @@
+ <body>
+ <h1>欢迎来到用户注册界面</h1>
+ <form action="user" method="get">
+-    用户名：<input type="text" name="name"><br/>
+-    密码：<input type="text" name="password"><br/>
+-    年龄：<input type="text" name="age"><br/>
++    用户编号：<input type="text" name="uid" ><br/>
++    用户名：<input type="text" name="name" ><br/>
++    密码：<input type="password" name="password"><br/>
++    年龄：<input type="text" name="age" ><br/>
+     <input type="submit"value="确认注册">
+ </form>
+ </body>
+Index: META-INF/application.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/META-INF/application.xml b/META-INF/application.xml
+new file mode 100644
+--- /dev/null	(date 1669647306498)
++++ b/META-INF/application.xml	(date 1669647306498)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<application xmlns="http://xmlns.jcp.org/xml/ns/javaee"
++             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_8.xsd"
++             version="8">
++
++</application>
+Index: web/index.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: J\r\n  Date: 2022/11/28\r\n  Time: 19:42\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n  <head>\r\n    <title>$Title$</title>\r\n  </head>\r\n  <body>id\r\n  <h1>登陆界面</h1>\r\n  <form action=\"user\" method=\"get\">\r\n    用户名：<input type=\"text\" name=\"name\" ><br/>\r\n    密码：<input type=\"password\" name=\"password\"><br/>\r\n    <input type=\"hidden\" name=\"num\" value=\"1\">\r\n    <input type=\"submit\"value=\"确认登录\">\r\n  </form>\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/index.jsp b/web/index.jsp
+--- a/web/index.jsp	(revision 96e7f04071695be2fe107f42fbd36db9c34711fe)
++++ b/web/index.jsp	(date 1669647541528)
+@@ -10,7 +10,7 @@
+   <head>
+     <title>$Title$</title>
+   </head>
+-  <body>id
++  <body>
+   <h1>登陆界面</h1>
+   <form action="user" method="get">
+     用户名：<input type="text" name="name" ><br/>
+Index: .idea/artifacts/usertest_1128_ear_exploded2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/artifacts/usertest_1128_ear_exploded2.xml b/.idea/artifacts/usertest_1128_ear_exploded2.xml
+new file mode 100644
+--- /dev/null	(date 1669647313338)
++++ b/.idea/artifacts/usertest_1128_ear_exploded2.xml	(date 1669647313338)
+@@ -0,0 +1,8 @@
++<component name="ArtifactManager">
++  <artifact type="exploded-ear" name="usertest_1128:ear exploded2">
++    <output-path>$PROJECT_DIR$/out/artifacts/usertest_1128_ear_exploded2</output-path>
++    <root id="root">
++      <element id="javaee-facet-resources" facet="usertest_1128/javaeeApplication/javaEEApplication" />
++    </root>
++  </artifact>
++</component>
+\ No newline at end of file
+Index: out/artifacts/usertest_1128_war_exploded/index.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: J\r\n  Date: 2022/11/28\r\n  Time: 19:42\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n  <head>\r\n    <title>$Title$</title>\r\n  </head>\r\n  <body>\r\n  <h1>登陆界面</h1>\r\n  <form action=\"user\" method=\"get\">\r\n    用户名：<input type=\"text\" name=\"name\" ><br/>\r\n    密码：<input type=\"text\" name=\"password\"><br/>\r\n    <input type=\"hidden\" name=\"num\" value=\"1\">\r\n    <input type=\"submit\"value=\"确认登录\">\r\n  </form>\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/artifacts/usertest_1128_war_exploded/index.jsp b/out/artifacts/usertest_1128_war_exploded/index.jsp
+--- a/out/artifacts/usertest_1128_war_exploded/index.jsp	(revision 96e7f04071695be2fe107f42fbd36db9c34711fe)
++++ b/out/artifacts/usertest_1128_war_exploded/index.jsp	(date 1669646555448)
+@@ -10,11 +10,11 @@
+   <head>
+     <title>$Title$</title>
+   </head>
+-  <body>
++  <body>id
+   <h1>登陆界面</h1>
+   <form action="user" method="get">
+     用户名：<input type="text" name="name" ><br/>
+-    密码：<input type="text" name="password"><br/>
++    密码：<input type="password" name="password"><br/>
+     <input type="hidden" name="num" value="1">
+     <input type="submit"value="确认登录">
+   </form>
+Index: usertest_1128.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"FacetManager\">\r\n    <facet type=\"web\" name=\"Web\">\r\n      <configuration>\r\n        <descriptors>\r\n          <deploymentDescriptor name=\"web.xml\" url=\"file://$MODULE_DIR$/web/WEB-INF/web.xml\" />\r\n        </descriptors>\r\n        <webroots>\r\n          <root url=\"file://$MODULE_DIR$/web\" relative=\"/\" />\r\n        </webroots>\r\n      </configuration>\r\n    </facet>\r\n  </component>\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"library\" name=\"lib\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"lib (2)\" level=\"project\" />\r\n    <orderEntry type=\"module-library\" exported=\"\">\r\n      <library>\r\n        <CLASSES>\r\n          <root url=\"jar://$MODULE_DIR$/../../develop/tomcat/apache-tomcat-8.5.38-windows-x64/apache-tomcat-8.5.38/lib/servlet-api.jar!/\" />\r\n          <root url=\"jar://$MODULE_DIR$/../../develop/tomcat/apache-tomcat-8.5.38-windows-x64/apache-tomcat-8.5.38/lib/jsp-api.jar!/\" />\r\n          <root url=\"file://$MODULE_DIR$/../../develop/tomcat/apache-tomcat-8.5.38-windows-x64/apache-tomcat-8.5.38\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES>\r\n          <root url=\"file://$MODULE_DIR$/../../develop/tomcat/apache-tomcat-8.5.38-windows-x64/apache-tomcat-8.5.38/webapps/docs/appdev/sample/src\" />\r\n          <root url=\"file://$MODULE_DIR$/../../develop/tomcat/apache-tomcat-8.5.38-windows-x64/apache-tomcat-8.5.38/webapps/examples/WEB-INF/classes\" />\r\n          <root url=\"file://$MODULE_DIR$/../../develop/tomcat/apache-tomcat-8.5.38-windows-x64/apache-tomcat-8.5.38/webapps/examples/WEB-INF/jsp/applet\" />\r\n          <root url=\"file://$MODULE_DIR$/../../develop/tomcat/apache-tomcat-8.5.38-windows-x64/apache-tomcat-8.5.38/webapps/examples/jsp/plugin/applet\" />\r\n          <root url=\"file://$MODULE_DIR$/../../develop/tomcat/apache-tomcat-8.5.38-windows-x64/apache-tomcat-8.5.38/work/Catalina/localhost/ROOT\" />\r\n        </SOURCES>\r\n      </library>\r\n    </orderEntry>\r\n    <orderEntry type=\"library\" name=\"lib (3)\" level=\"project\" />\r\n    <orderEntry type=\"module-library\" exported=\"\">\r\n      <library>\r\n        <CLASSES>\r\n          <root url=\"jar://$MODULE_DIR$/../../Tools/apache-tomcat-8.5.38/lib/servlet-api.jar!/\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES />\r\n      </library>\r\n    </orderEntry>\r\n    <orderEntry type=\"module-library\" exported=\"\">\r\n      <library>\r\n        <CLASSES>\r\n          <root url=\"jar://$MODULE_DIR$/../../Tools/apache-tomcat-8.5.38/lib/jsp-api.jar!/\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES />\r\n      </library>\r\n    </orderEntry>\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/usertest_1128.iml b/usertest_1128.iml
+--- a/usertest_1128.iml	(revision 96e7f04071695be2fe107f42fbd36db9c34711fe)
++++ b/usertest_1128.iml	(date 1669647313326)
+@@ -9,6 +9,14 @@
+         <webroots>
+           <root url="file://$MODULE_DIR$/web" relative="/" />
+         </webroots>
++        <sourceRoots />
++      </configuration>
++    </facet>
++    <facet type="javaeeApplication" name="javaEEApplication">
++      <configuration>
++        <descriptors>
++          <deploymentDescriptor name="application.xml" url="file://$MODULE_DIR$/META-INF/application.xml" />
++        </descriptors>
+       </configuration>
+     </facet>
+   </component>
+Index: src/jdbc.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>url=jdbc:mysql://localhost:3306/mytextdb?serverTimezone=GMT&useSSL=false\r\nuser=root\r\npassword=123456\r\ndriverClass=com.mysql.cj.jdbc.Driver
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/jdbc.properties b/src/jdbc.properties
+--- a/src/jdbc.properties	(revision 96e7f04071695be2fe107f42fbd36db9c34711fe)
++++ b/src/jdbc.properties	(date 1669647853250)
+@@ -1,4 +1,4 @@
+-url=jdbc:mysql://localhost:3306/mytextdb?serverTimezone=GMT&useSSL=false
++url=jdbc:mysql://localhost:3306/mytestdb?serverTimezone=GMT&useSSL=false
+ user=root
+ password=123456
+ driverClass=com.mysql.cj.jdbc.Driver
+\ No newline at end of file

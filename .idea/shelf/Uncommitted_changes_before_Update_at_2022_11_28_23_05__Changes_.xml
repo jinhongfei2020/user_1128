@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Update_at_2022_11_28_23_05_[Changes]" date="1669647975677" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_28_23_05_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022/11/28 23:05 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/artifacts/usertest_1128_war_exploded/WEB-INF/classes/com/jr/dao/impl/UserDaoImpl.class" />
+    <option name="AFTER_PATH" value="out/artifacts/usertest_1128_war_exploded/WEB-INF/classes/com/jr/dao/impl/UserDaoImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_28_23_05_[Changes]/UserDaoImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/artifacts/usertest_1128_war_exploded/WEB-INF/classes/com/jr/biz/impl/UserBizImpl.class" />
+    <option name="AFTER_PATH" value="out/artifacts/usertest_1128_war_exploded/WEB-INF/classes/com/jr/biz/impl/UserBizImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_28_23_05_[Changes]/UserBizImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/usertest_1128/com/jr/biz/impl/UserBizImpl.class" />
+    <option name="AFTER_PATH" value="out/production/usertest_1128/com/jr/biz/impl/UserBizImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_28_23_05_[Changes]/UserBizImpl1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/usertest_1128/com/jr/dao/impl/UserDaoImpl.class" />
+    <option name="AFTER_PATH" value="out/production/usertest_1128/com/jr/dao/impl/UserDaoImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_28_23_05_[Changes]/UserDaoImpl1.class" />
+  </binary>
+</changelist>
