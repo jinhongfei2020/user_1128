@@ -3,6 +3,7 @@ package com.jr.dao.impl;
 import com.jr.dao.IUserDao;
 import com.jr.entry.User;
 import com.jr.util.DBHelper;
+import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -24,7 +25,33 @@ public class UserDaoImpl implements IUserDao {
 
     @Override
     public User selectUser(User user) {
-        return null;
+        User user1=null;
+        //连接数据库
+        try {
+            con = DBHelper.getconn();
+            //获取Parpareparement
+            String sql="select * from emp where name=? and password=?";
+            ps = con.prepareStatement(sql);
+            //设置值
+            ps.setObject(1,user.getName());
+            ps.setObject(2,user.getPassword());
+            //执行查询操作
+            rs=ps.executeQuery();
+            if (rs.next()) {
+                user1 = new User();
+                user1.setName(rs.getString(2));
+                user1.setPassword(rs.getString(3));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            DBHelper.closeAll(rs,ps,con);
+        }
+        return user1;
     }
 
     @Override
