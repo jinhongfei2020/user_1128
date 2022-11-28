@@ -20,16 +20,6 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String i = request.getParameter("i");
-        if (i == null){
-            selectByid(request,response);
-        }else if (Integer.parseInt(i)==4){
-            try {
-                updateUser(request,response);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-        }
 
 
     }
