@@ -21,6 +21,6 @@ public interface IUserDao {
     public int deleteUser(User user);
 
     //修改用户信息 修改方法
-    public List<User> selectById(User user);
+    public User selectById(int uid);
     public int updateUser(User user);
 }

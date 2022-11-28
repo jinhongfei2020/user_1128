@@ -21,7 +21,7 @@ public interface IUserBiz {
     public boolean removeUser(User user);
 
     //修改员工信息
-    public List<User> queryByid(User user);
+    public User queryByid(int uid);
     public boolean changeUser(User user);
 
 

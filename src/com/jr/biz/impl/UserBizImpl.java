@@ -1,11 +1,15 @@
 package com.jr.biz.impl;
 
 import com.jr.biz.IUserBiz;
+import com.jr.dao.impl.UserDaoImpl;
 import com.jr.entry.User;
 
 import java.util.List;
 
 public class UserBizImpl implements IUserBiz {
+
+    UserDaoImpl userDao = new UserDaoImpl();
+
     @Override
     public boolean registerUser(User user) {
         return false;
@@ -27,12 +31,12 @@ public class UserBizImpl implements IUserBiz {
     }
 
     @Override
-    public List<User> queryByid(User user) {
-        return null;
+    public User queryByid(int uid) {
+        return userDao.selectById(uid);
     }
 
     @Override
     public boolean changeUser(User user) {
-        return false;
+        return userDao.updateUser(user)==0?false:true;
     }
 }
