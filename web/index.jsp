@@ -10,7 +10,7 @@
   <head>
     <title>$Title$</title>
   </head>
-  <body>id
+  <body>
   <h1>登陆界面</h1>
   <form action="user" method="get">
     用户名：<input type="text" name="name" ><br/>
