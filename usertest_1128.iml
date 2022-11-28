@@ -30,7 +30,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://D:/tomcat-8.0/apache-tomcat-8.5.38/lib/jsp-api.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Tools/apache-tomcat-8.5.38/lib/jsp-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -39,27 +39,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://D:/tomcat-8.0/apache-tomcat-8.5.38/lib/servlet-api.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="lib (2)" level="project" />
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://D:/tomcat/apache-tomcat-8.5.38/lib/jsp-api.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://D:/tomcat/apache-tomcat-8.5.38/lib/servlet-api.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Tools/apache-tomcat-8.5.38/lib/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
