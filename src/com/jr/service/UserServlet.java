@@ -1,10 +1,8 @@
 package com.jr.service;
 
 import com.jr.biz.impl.UserBizImpl;
-import com.jr.dao.impl.UserDaoImpl;
 import com.jr.entry.User;
 
-import javax.lang.model.element.VariableElement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,14 +13,14 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-@WebServlet("/rs")
+@WebServlet("/user")
 public class UserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int i= Integer.parseInt(request.getParameter("i"));
-        switch (i){
-            case 2:
+        int num= Integer.parseInt(request.getParameter("num"));
+        switch (num){
+            case 1:
                 login(request,response);
                 break;
         }
@@ -32,28 +30,28 @@ public class UserServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
-
     }
     public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
-        String name = request.getParameter("name");
         String password = request.getParameter("password");
+        String name = request.getParameter("name");
+        //查询功能
+        UserBizImpl biz = new UserBizImpl();
         User user = new User();
         user.setName(name);
         user.setPassword(password);
-        UserBizImpl userBiz = new UserBizImpl();
-        boolean b = userBiz.loginUser(user);
-        if(b){
+        boolean e = biz.loginUser(user);
+        if(e){
             response.getWriter().println("登录成功");
-            request.getRequestDispatcher("rs?i=3").forward(request,response);
-
+           /* request.getRequestDispatcher("rs?i=3").forward(request,response);*/
         }else{
-            response.getWriter().println("<a style='text-decoration:none;color:pink;' href='login.jsp'><h1 >登录失败,请点击此链接重新登录</h1></a>");
+            response.getWriter().println("<a style='text-decoration:none;color:pink;' href='index.jsp'><h1 >登录失败,请点击此链接重新登录</h1></a>");
 
         }
+
     }
     public void showUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         request.setCharacterEncoding("utf-8");

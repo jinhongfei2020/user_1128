@@ -25,12 +25,12 @@ public class UserDaoImpl implements IUserDao {
 
     @Override
     public User selectUser(User user) {
-        User user1=null;
+        User user2 =null;
         //连接数据库
         try {
             con = DBHelper.getconn();
             //获取Parpareparement
-            String sql="select * from emp where name=? and password=?";
+            String sql="select * from user where name=? and password=?";
             ps = con.prepareStatement(sql);
             //设置值
             ps.setObject(1,user.getName());
@@ -38,9 +38,9 @@ public class UserDaoImpl implements IUserDao {
             //执行查询操作
             rs=ps.executeQuery();
             if (rs.next()) {
-                user1 = new User();
-                user1.setName(rs.getString(2));
-                user1.setPassword(rs.getString(3));
+                user2 = new User();
+                user2.setName(rs.getString(2));
+                user2.setPassword(rs.getString(3));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -51,7 +51,7 @@ public class UserDaoImpl implements IUserDao {
         }finally{
             DBHelper.closeAll(rs,ps,con);
         }
-        return user1;
+        return user2;
     }
 
     @Override
@@ -61,7 +61,8 @@ public class UserDaoImpl implements IUserDao {
 
     @Override
     public int deleteUser(User user) {
-        return 0;
+        String sql="delete from team5 where uid=?";
+        return upd(sql,user.getUid());
     }
 
     @Override

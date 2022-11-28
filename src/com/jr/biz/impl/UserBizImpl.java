@@ -1,11 +1,13 @@
 package com.jr.biz.impl;
 
 import com.jr.biz.IUserBiz;
+import com.jr.dao.impl.UserDaoImpl;
 import com.jr.entry.User;
 
 import java.util.List;
 
 public class UserBizImpl implements IUserBiz {
+    UserDaoImpl udi=new UserDaoImpl();
     @Override
     public boolean registerUser(User user) {
         return false;
@@ -13,7 +15,7 @@ public class UserBizImpl implements IUserBiz {
 
     @Override
     public boolean loginUser(User user) {
-        return false;
+        return udi.selectUser(user)==null?false:true;
     }
 
     @Override
@@ -23,7 +25,7 @@ public class UserBizImpl implements IUserBiz {
 
     @Override
     public boolean removeUser(User user) {
-        return false;
+        return udi.deleteUser(user)==1?true:false;
     }
 
     @Override

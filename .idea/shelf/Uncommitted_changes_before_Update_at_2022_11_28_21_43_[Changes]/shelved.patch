@@ -1,0 +1,118 @@
+Index: .idea/libraries/lib__2_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/lib__2_.xml b/.idea/libraries/lib__2_.xml
+new file mode 100644
+--- /dev/null	(date 1669640413309)
++++ b/.idea/libraries/lib__2_.xml	(date 1669640413309)
+@@ -0,0 +1,10 @@
++<component name="libraryTable">
++  <library name="lib (2)">
++    <CLASSES>
++      <root url="file://$PROJECT_DIR$/web/WEB-INF/lib" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++    <jarDirectory url="file://$PROJECT_DIR$/web/WEB-INF/lib" recursive="false" />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/artifacts/usertest_1128_ear_exploded.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/artifacts/usertest_1128_ear_exploded.xml b/.idea/artifacts/usertest_1128_ear_exploded.xml
+new file mode 100644
+--- /dev/null	(date 1669640526684)
++++ b/.idea/artifacts/usertest_1128_ear_exploded.xml	(date 1669640526684)
+@@ -0,0 +1,8 @@
++<component name="ArtifactManager">
++  <artifact type="exploded-ear" name="usertest_1128:ear exploded">
++    <output-path>$PROJECT_DIR$/out/artifacts/usertest_1128_ear_exploded</output-path>
++    <root id="root">
++      <element id="javaee-facet-resources" facet="usertest_1128/javaeeApplication/javaEEApplication" />
++    </root>
++  </artifact>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Java_EE_6_Java_EE_6.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Java_EE_6_Java_EE_6.xml b/.idea/libraries/Java_EE_6_Java_EE_6.xml
+new file mode 100644
+--- /dev/null	(date 1669640526689)
++++ b/.idea/libraries/Java_EE_6_Java_EE_6.xml	(date 1669640526689)
+@@ -0,0 +1,16 @@
++<component name="libraryTable">
++  <library name="Java EE 6-Java EE 6">
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/javax.annotation.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/javax.transaction.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/javax.jms.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/javax.resource.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/javax.ejb.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jsp.jar!/" />
++      <root url="jar://$PROJECT_DIR$/lib/javax.persistence.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: usertest_1128.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"FacetManager\">\r\n    <facet type=\"web\" name=\"Web\">\r\n      <configuration>\r\n        <descriptors>\r\n          <deploymentDescriptor name=\"web.xml\" url=\"file://$MODULE_DIR$/web/WEB-INF/web.xml\" />\r\n        </descriptors>\r\n        <webroots>\r\n          <root url=\"file://$MODULE_DIR$/web\" relative=\"/\" />\r\n        </webroots>\r\n      </configuration>\r\n    </facet>\r\n  </component>\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"module-library\" exported=\"\">\r\n      <library>\r\n        <CLASSES>\r\n          <root url=\"jar://$MODULE_DIR$/../../tomcat-8.0/apache-tomcat-8.5.38/lib/jsp-api.jar!/\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES />\r\n      </library>\r\n    </orderEntry>\r\n    <orderEntry type=\"module-library\" exported=\"\">\r\n      <library>\r\n        <CLASSES>\r\n          <root url=\"jar://$MODULE_DIR$/../../tomcat-8.0/apache-tomcat-8.5.38/lib/servlet-api.jar!/\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES />\r\n      </library>\r\n    </orderEntry>\r\n    <orderEntry type=\"library\" name=\"lib\" level=\"project\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/usertest_1128.iml b/usertest_1128.iml
+--- a/usertest_1128.iml	(revision 6a6f9690893c9e9958a94262e672d26c688c3716)
++++ b/usertest_1128.iml	(date 1669640526676)
+@@ -9,6 +9,14 @@
+         <webroots>
+           <root url="file://$MODULE_DIR$/web" relative="/" />
+         </webroots>
++        <sourceRoots />
++      </configuration>
++    </facet>
++    <facet type="javaeeApplication" name="javaEEApplication">
++      <configuration>
++        <descriptors>
++          <deploymentDescriptor name="application.xml" url="file://$MODULE_DIR$/META-INF/application.xml" />
++        </descriptors>
+       </configuration>
+     </facet>
+   </component>
+@@ -38,5 +46,7 @@
+       </library>
+     </orderEntry>
+     <orderEntry type="library" name="lib" level="project" />
++    <orderEntry type="library" name="lib (2)" level="project" />
++    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: META-INF/application.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/META-INF/application.xml b/META-INF/application.xml
+new file mode 100644
+--- /dev/null	(date 1669640450158)
++++ b/META-INF/application.xml	(date 1669640450158)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<application xmlns="http://xmlns.jcp.org/xml/ns/javaee"
++             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_8.xsd"
++             version="8">
++
++</application>
