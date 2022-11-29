@@ -39,6 +39,7 @@ public class UserServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
+        System.out.println("ghhhhhh");
 
     }
 
